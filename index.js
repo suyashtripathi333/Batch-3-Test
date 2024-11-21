@@ -190,3 +190,5 @@ setInterval(fetchAndSaveData, 60 * 60 * 1000);
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+
+

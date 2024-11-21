@@ -822,6 +822,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const sortedData = sortData(filteredData, 'mediumSolved', mediumSolvedDirection, true);
             renderLeaderboard(sortedData);
         });
+        doc
 
         document.getElementById('sort-hard').addEventListener('click', () => {
             hardSolvedDirection = hardSolvedDirection === 'desc' ? 'asc' : 'desc';
@@ -829,7 +830,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderLeaderboard(sortedData);
         });
 
+       
+
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 });
+
+document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    document.getElementById('dark-mode-toggle').textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+
+})
+
+

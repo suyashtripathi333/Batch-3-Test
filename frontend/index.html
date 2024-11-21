@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
     <title>LeetCode Leaderboard</title>
 </head>
-<body class="bg-gray-900 text-white p-5">
+<body class="bg-gray-900 text-white p-5 dark-mode " id="body" >
+
     <!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas> -->
     <div class="container mx-auto my-10">
         <div class="">
@@ -19,6 +22,8 @@
                         <select id="section-filter" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <option value="all">All Sections</option>
                         </select>
+                        <Marquee>GLA UNIVERSITY</Marquee>
+                        <button class="bt" id="dark-mode-toggle">DARK MODE</button>
                         <button id="export-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center transition duration-150 ease-in-out">
                             <i class="fas fa-download mr-2"></i> Export to CSV
                         </button>
@@ -88,6 +93,7 @@
             </div>
         </div>
     </div>
+    <script src="frontend/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="index.js"></script>
 </body>
