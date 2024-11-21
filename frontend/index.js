@@ -837,10 +837,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+const root = document.getElementById('body');
+
 document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+    root.innerHTML = root.innerHTML.replace('bg-gray-900', 'bg-gray-100');
     document.getElementById('dark-mode-toggle').textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
 
 })
 
+document.getElementById('dark-mode-toggle1').addEventListener('click', () => {
+    root.innerHTML = root.innerHTML.replace('bg-gray-100', 'bg-gray-900');
+    document.getElementById('dark-mode-toggle1').textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+
+})
 
